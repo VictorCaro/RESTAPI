@@ -29,7 +29,7 @@ func main() {
 	r.HandleFunc("/tasks", routes.GetTasksHandler).Methods("GET")
 	r.HandleFunc("/tasks", routes.CreateTaskHandler).Methods("Post")
 	r.HandleFunc("/tasks", routes.GetTaskHandler).Methods("GET")
-	r.HandleFunc("/tasks", routes.DeleteTaskHandler).Methods("DELETE")
+	r.HandleFunc("/tasks", routes.DeleteTasksHandler).Methods("DELETE")
 
 	http.ListenAndServe(":3000", r)
 
